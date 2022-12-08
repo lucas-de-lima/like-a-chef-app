@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { useHistory, useParams } from 'react-router-dom';
+import DetailHeader from '../components/DetailHeader';
 import { cocktailDetails, mealDetails } from '../components/services/dataFetchApi';
 
 function RecipeInProgress() {
   const { id } = useParams();
   const history = useHistory();
   const [recipe, setRecipe] = useState([]);
+  const { pathname } = history.location;
 
   const infoItem = async () => {
-    const { pathname } = history.location;
     let recipeInfo = recipe;
     if (pathname.includes('/meals')) {
       const getMeal = await mealDetails(id);
@@ -72,24 +73,17 @@ function RecipeInProgress() {
     return recipeInfo;
   };
 
+  const capitalize = (word) => word[0].toUpperCase() + word.substring(1, word.length - 1);
+  const rawPath = pathname.split('/');
+  const type = capitalize(rawPath[1]);
+  const path = rawPath.slice(0, (rawPath.length - 1)).join('/');
+
   return (
     <div>
       {recipe.length > 0
         && (
           <>
-            <h1 data-testid="recipe-title">
-              {`Recipe: ${defineRecipe().recipeTitle}`}
-            </h1>
-            <img
-              data-testid="recipe-photo"
-              src={ defineRecipe().recipeImage }
-              alt={ defineRecipe().recipeTitle }
-              width="300"
-            />
-            <h2 data-testid="recipe-category">
-              { `Category: ${defineRecipe().recipeCategory}`}
-            </h2>
-
+            <DetailHeader recipe={ recipe[0] } type={ type } path={ path } />
             <p data-testid="instructions">
               { `Instructions: ${defineRecipe().recipeInstructions}`}
             </p>
@@ -105,19 +99,6 @@ function RecipeInProgress() {
                 type="button"
               >
                 Terminar Receita
-              </button>
-              <button
-                data-testid="share-btn"
-                type="button"
-              >
-                Compartilhar
-              </button>
-
-              <button
-                data-testid="favorite-btn"
-                type="button"
-              >
-                Favoritar
               </button>
             </div>
           </>
