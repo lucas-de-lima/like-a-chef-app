@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useHistory, useParams } from 'react-router-dom';
 import DetailHeader from '../components/DetailHeader';
+import IngredientList from '../components/IngredientList';
 import { cocktailDetails, mealDetails } from '../components/services/dataFetchApi';
 
 function RecipeInProgress() {
@@ -87,6 +88,11 @@ function RecipeInProgress() {
             <p data-testid="instructions">
               { `Instructions: ${defineRecipe().recipeInstructions}`}
             </p>
+            <IngredientList
+              ingredients={ defineRecipe().recipeIngredients }
+              measures={ defineRecipe().recipeMeasures }
+              inProgress
+            />
             <iframe
               data-testid="video"
               src={ defineRecipe().recipeVideo }
