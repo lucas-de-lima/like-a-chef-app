@@ -1,4 +1,4 @@
-import { act, cleanup, screen } from '@testing-library/react';
+import { act, cleanup, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 import mockFetch from '../../cypress/mocks/fetch';
@@ -15,6 +15,18 @@ describe('teste da página Profile', () => {
   });
   afterEach(() => {
     cleanup();
+  });
+
+  it('Verifica se o botão Logout altera para a rota correta', async () => {
+    const { history } = renderWithRouterAndRedux(<App />);
+
+    act(() => history.push('/profile'));
+
+    const logoutBtn = await screen.findByTestId('profile-logout-btn');
+    expect(logoutBtn).toBeInTheDocument();
+
+    act(() => userEvent.click(logoutBtn));
+    waitFor(() => expect(history.location.pathname).toBe('/'));
   });
 
   it('Verifica se o email do usuário está na página Profile', () => {
@@ -74,25 +86,5 @@ describe('teste da página Profile', () => {
     expect(favBtn).toBeInTheDocument();
     userEvent.click(favBtn);
     expect(history.location.pathname).toBe('/favorite-recipes');
-  });
-  it('Verifica se o botão Logout altera para a rota correta', () => {
-    const { history } = renderWithRouterAndRedux(<App />);
-
-    const emailInput = screen.getByTestId(email);
-    const passwordInput = screen.getByTestId(password);
-    const loginBtn = screen.getByRole('button', { name: /entrar/i });
-
-    userEvent.type(emailInput, typedEmail);
-    userEvent.type(passwordInput, '1234567');
-    userEvent.click(loginBtn);
-
-    act(() => {
-      history.push('/profile');
-    });
-
-    const logoutBtn = screen.getByTestId('profile-logout-btn');
-    expect(logoutBtn).toBeInTheDocument();
-    userEvent.click(logoutBtn);
-    expect(history.location.pathname).toBe('/');
   });
 });
