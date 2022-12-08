@@ -1,5 +1,4 @@
-import { act, cleanup, screen, waitFor } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
+import { act, cleanup, screen } from '@testing-library/react';
 import React from 'react';
 import mockFetch from '../../cypress/mocks/fetch';
 import App from '../App';
