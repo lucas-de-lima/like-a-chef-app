@@ -15,7 +15,6 @@ export default function IngredientList({ ingredients, measures, inProgress }) {
     } else {
       tempList.splice(isRepeated, 1);
     }
-
     setIngredientList(tempList);
   };
 
@@ -43,7 +42,6 @@ export default function IngredientList({ ingredients, measures, inProgress }) {
                   id={ `${i}-ingredient-step>` }
                   onChange={ (event) => handleChange(event) }
                 />
-
                 <span>{`${ingredient}`}</span>
                 {' - '}
                 <span>{measures[i]}</span>
@@ -71,5 +69,3 @@ IngredientList.propTypes = {
 IngredientList.defaultProps = {
   inProgress: false,
 };
-
-// IngredientList.propTypes = {}.isRequired;
