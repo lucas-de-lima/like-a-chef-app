@@ -23,6 +23,12 @@ Like a Chef é um aplicativo de receitas que permite aos usuários buscar, criar
 
 Atualmente, o aplicativo não permite a criação de novas receitas. No entanto, esse é um recurso que pode ser adicionado em versões futuras do aplicativo.
 
+## Acessando o App na web
+Visite  o site do aplicativo em [https://like-a-chef-app.vercel.app/](https://like-a-chef-app.vercel.app/)
+
+⚠️ Recomendo utilizar o app em modo responsivo para uma melhor experiência
+ 
+
 ## Como executar o projeto
 
 1. Clone o repositório e instale as dependências do projeto:
@@ -31,6 +37,7 @@ git clone git@github.com:lucas-de-lima/like-a-cheaf-app.git
 cd like-a-cheaf-app
 npm install
 ```
+⚠️ Recomendo utilizar o app em modo responsivo para uma melhor experiência
 
 ## Contribuição
 Se você deseja contribuir com este projeto, sinta-se à vontade para enviar um pull request. Certifique-se de descrever claramente as alterações propostas e as razões por trás delas.
