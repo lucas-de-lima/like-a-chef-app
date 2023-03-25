@@ -1,13 +1,39 @@
-# :construction: README customizado em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto no qual você pode customizar e reutilizar todas as vezes que for executar o trybe-publisher.
+# Like a Chef
 
-Para deixá-lo com a sua cara, basta alterar o seguinte arquivo da sua máquina: ~/.student-repo-publisher/custom/_NEW_README.md
+Like a Chef é um aplicativo de receitas que permite aos usuários buscar, criar e salvar suas receitas favoritas. Este aplicativo foi desenvolvido usando React e Redux para gerenciar o estado.
 
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+## Ferramentas e bibliotecas utilizadas
+
+- [React](https://reactjs.org/)
+- [Redux](https://redux.js.org/)
+- [React-Redux](https://react-redux.js.org/)
+- Context API do React
+- Hook useState do React
+- Hook useContext do React
+- Hook useEffect do React
+- Hooks personalizados
+
+## Recursos
+
+- Busca de receitas por ingredientes, nome ou categoria
+- Visualização de receitas com imagem, lista de ingredientes e instruções
+- Salvamento de receitas favoritas para acesso posterior
+
+## Limitações
+
+Atualmente, o aplicativo não permite a criação de novas receitas. No entanto, esse é um recurso que pode ser adicionado em versões futuras do aplicativo.
+
+## Como executar o projeto
+
+1. Clone o repositório e instale as dependências do projeto:
+```sh
+git clone git@github.com:lucas-de-lima/like-a-cheaf-app.git
+cd like-a-cheaf-app
+npm install
+```
+
+## Contribuição
+Se você deseja contribuir com este projeto, sinta-se à vontade para enviar um pull request. Certifique-se de descrever claramente as alterações propostas e as razões por trás delas.
+
+## Licença
+Este projeto está licenciado sob a Licença MIT - consulte o arquivo LICENSE.md para obter detalhes.
