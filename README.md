@@ -27,7 +27,7 @@ Atualmente, o aplicativo não permite a criação de novas receitas. No entanto,
 ⚠️ Para uma melhor experiência, recomendamos que os usuários visualizem o Like a Chef em modo responsivo. Isso pode ser feito acessando o site do aplicativo em [Like a Chef! Web App](https://like-a-cheaf-app.vercel.app/ "target=\_blank") ou rodando o aplicativo localmente em seu localhost. -->
 
 ## Acessando o App na web ou localhost
-⚠️ Para uma melhor experiência, recomendamos que os usuários visualizem o Like a Chef em modo responsivo. Isso pode ser feito acessando o site do aplicativo em <a href="https://like-a-chef-app.vercel.app/" target="_blank">https://like-a-chef-app.vercel.app/</a>
+⚠️ Para uma melhor experiência, recomendamos que os usuários visualizem o Like a Chef em modo responsivo. Isso pode ser feito acessando o site do aplicativo em <a href="https://like-a-cheaf-app.vercel.app/" target="_blank">https://like-a-cheaf-app.vercel.app/</a>
  ou rodando o aplicativo localmente em seu localhost.
 
 ## Como executar o projeto
