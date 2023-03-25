@@ -24,7 +24,7 @@ Like a Chef é um aplicativo de receitas que permite aos usuários buscar, criar
 Atualmente, o aplicativo não permite a criação de novas receitas. No entanto, esse é um recurso que pode ser adicionado em versões futuras do aplicativo.
 
 ## Acessando o App na web
-Visite  o site do aplicativo em [https://like-a-chef-app.vercel.app/](https://like-a-chef-app.vercel.app/)
+Visite  o site do aplicativo em [https://like-a-cheaf-app.vercel.app](https://like-a-cheaf-app.vercel.app/)
 
 ⚠️ Recomendo utilizar o app em modo responsivo para uma melhor experiência
  
