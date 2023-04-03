@@ -2,6 +2,10 @@
 
 Like a Chef é um aplicativo de receitas que permite aos usuários buscar, criar e salvar suas receitas favoritas. Este aplicativo foi desenvolvido usando React e Redux para gerenciar o estado.
 
+## Overview
+<img src="https://raw.githubusercontent.com/lucas-de-lima/like-a-cheaf-app/public/like-a-chef.gif" width="230">
+https://raw.githubusercontent.com/lucas-de-lima/pokedex/main/public/pokedex.gif
+
 ## Ferramentas e bibliotecas utilizadas
 
 - [React](https://reactjs.org/)
